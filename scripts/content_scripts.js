@@ -679,7 +679,7 @@ function replaceVerb(node){
             return word; 
         })
 
-        node.textContent = newWords.join(' ');
+        node.innerHTML = newWords.join(' ');
     }else{
         // if not a text, traverse all its childs
         node.childNodes.forEach(replaceVerb);
@@ -705,7 +705,7 @@ function replaceNoun(node){
             return word;
         })
 
-        node.textContent = newWords.join(' ');
+        node.innerHTML = newWords.join(' ');
     }else{
         // if not a text, traverse all its childs
         node.childNodes.forEach(replaceNoun);
@@ -731,7 +731,7 @@ function replaceAdj(node){
             return word;
         })
 
-        node.textContent = newWords.join(' ');
+        node.innerHTML = newWords.join(' ');
     }else{
         // if not a text, traverse all its childs
         node.childNodes.forEach(replaceAdj);
