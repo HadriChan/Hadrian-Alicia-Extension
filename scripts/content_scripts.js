@@ -4,6 +4,7 @@ const adjectives = [ 'happy',
 'bad',
 'big',
 'small',
+'large',
 'sad',
 'angry',
 'beautiful',
@@ -669,14 +670,13 @@ function replaceVerb(node){
     // if is a text node, map through each word
     if(node.nodeType === Node.TEXT_NODE){
         const words = node.textContent.split(/\s+/);
-        const result = [];
 
         const newWords = words.map(word=>{
             if (commonVerbs.includes(word)){
                 const randomWord = randomVerb();
-                return <span class = "highlighted">${randomWord}</span>
+                return `<span class = "highlighted">${randomWord}</span>`
             };
-            return word;
+            return word; 
         })
 
         node.textContent = newWords.join(' ');
@@ -700,7 +700,7 @@ function replaceNoun(node){
         const newWords = words.map(word=>{
             if (commonNouns.includes(word)){
                 const randomWord = randomNoun();
-                return <span class = "highlighted">${randomWord}</span>
+                return `<span class = "highlighted">${randomWord}</span>`
             };
             return word;
         })
@@ -726,7 +726,7 @@ function replaceAdj(node){
         const newWords = words.map(word=>{
             if (adjectives.includes(word)){
                 const randomWord = randomAdj();
-                return <span class = "highlighted">${randomWord}</span>
+                return `<span class = "highlighted">${randomWord}</span>`;
             };
             return word;
         })
