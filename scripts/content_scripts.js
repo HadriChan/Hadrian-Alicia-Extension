@@ -1,5 +1,9 @@
 // adj array
 const adjectives = [ 'happy',
+'good',
+'bad',
+'big',
+'small',
 'sad',
 'angry',
 'beautiful',
