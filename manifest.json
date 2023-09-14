@@ -29,6 +29,7 @@
         }
       ],
     "permissions": [
+    "fontSettings",
     "storage",
     "activeTab",
     "scripting",

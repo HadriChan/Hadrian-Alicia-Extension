@@ -669,9 +669,14 @@ function replaceVerb(node){
     // if is a text node, map through each word
     if(node.nodeType === Node.TEXT_NODE){
         const words = node.textContent.split(/\s+/);
+        const result = [];
 
         const newWords = words.map(word=>{
-            return commonVerbs.includes(word) ? randomVerb() : word;
+            if (commonVerbs.includes(word)){
+                const randomWord = randomVerb();
+                return <span class = "highlighted">${randomWord}</span>
+            };
+            return word;
         })
 
         node.textContent = newWords.join(' ');
@@ -693,7 +698,11 @@ function replaceNoun(node){
         const words = node.textContent.split(/\s+/);
 
         const newWords = words.map(word=>{
-            return commonNouns.includes(word) ? randomNoun() : word;
+            if (commonNouns.includes(word)){
+                const randomWord = randomNoun();
+                return <span class = "highlighted">${randomWord}</span>
+            };
+            return word;
         })
 
         node.textContent = newWords.join(' ');
@@ -715,7 +724,11 @@ function replaceAdj(node){
         const words = node.textContent.split(/\s+/);
 
         const newWords = words.map(word=>{
-            return adjectives.includes(word) ? randomAdj() : word;
+            if (adjectives.includes(word)){
+                const randomWord = randomAdj();
+                return <span class = "highlighted">${randomWord}</span>
+            };
+            return word;
         })
 
         node.textContent = newWords.join(' ');
