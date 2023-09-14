@@ -1,4 +1,4 @@
-normalAdjectives = [ 'happy',
+const adjectives = [ 'happy',
 'sad',
 'angry',
 'beautiful',

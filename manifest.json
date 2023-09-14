@@ -1,7 +1,7 @@
 {
-    "name": "Chrome Extension MV3",
-    "description": "Learning all about Chrome Extensions Manifest Version 3!",
-    "version": "0.1.0",
+    "name": "Mad Libs Extension",
+    "description": "Randomizing words for fun and profit",
+    "version": "1.0",
     "manifest_version": 3,
     "icons": {
         "16": "/images/icon-16x16.png",

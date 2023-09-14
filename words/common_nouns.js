@@ -1,4 +1,4 @@
-const nouns = [
+const commonNouns= [
     "apple",
     "book",
     "car",
